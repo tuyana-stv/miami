@@ -13,6 +13,10 @@ body {
     margin: 0 auto;
 }
 
+.visually-hidden {
+    /*display: none;*/
+}
+
 .header {
     margin: 0;
     color: #FFFFFF;
@@ -22,3 +26,132 @@ body {
     background-size: cover;
 }
 
+.nav {
+    background-color: #0075FF;
+    max-width: 1260px;
+}
+
+.nav__list,
+.contacts__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav__item {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: bold;    
+    text-transform: uppercase;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav__callback,
+.header__phone-number {
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.nav__call-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header__title {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+.description__slogan,
+.gallery__title,
+.feedback__title,
+.contacts__title {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+.description__slogan span,
+.description__text-lead,
+.gallery-content__desc span,
+.gallery__btn,
+.feedback__author {
+    color: #0075FF;
+    font-weight: bold;
+}
+
+.description__text-lead,
+.feedback__author {
+    font-size: 24px;
+    line-height: 30px;
+    font-style: normal;
+}
+
+.btn {
+    line-height: 14px;
+
+}
+
+.feedback__post,
+.item-contacts__title {
+    color: #9FADC2;
+    font-size: 14px;    
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #8F99A8;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #8F99A8;
+   opacity:  1;
+   font-size: 14px;
+   line-height: 20px;
+   font-family: "Roboto", "Arial", sans-serif;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #8F99A8;
+   opacity:  1;
+   font-size: 14px;
+   line-height: 20px;
+   font-family: "Roboto", "Arial", sans-serif;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #8F99A8;
+   font-size: 14px;
+   line-height: 20px;
+   font-family: "Roboto", "Arial", sans-serif;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #8F99A8;
+   font-size: 14px;
+   line-height: 20px;
+   font-family: "Roboto", "Arial", sans-serif;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #8F99A8;
+   font-size: 14px;
+   line-height: 20px;
+   font-family: "Roboto", "Arial", sans-serif;
+}
+
+.contacts__btn {
+    color: #FFFFFF;
+    background-color: #005ECC;
+}
+
+.footer {
+    background-image: url(img/miami-city.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
