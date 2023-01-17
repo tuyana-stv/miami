@@ -11,9 +11,15 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__container">
-          <nav class="nav nav--hover nav--active">
+      <div class="header__menu">
+        <div class="container">
+          <div class="menu__header">
+            <span></span>
+          </div>
+          <a class="header__logo" href="#">
+            <img class="header__logo-img" src="img/Logo_Miami.png" alt="Logo of site Miami" width="136" height="80">
+          </a>     
+          <nav class="nav nav--hover nav--active">          
             <ul class="nav__list">
               <li class="nav__item nav__item--current">
                 <a class="nav__link nav__link--hover nav__link--active" href="#">home</a>
@@ -31,18 +37,20 @@
                 <a class="nav__link nav__link--hover nav__link--active" href="#">contacts</a>
               </li>
             </ul>
-            <div class="nav__callback">
-              <p class="nav__phone-number">+1 234 555-55-55</p>
-              <a class="nav__call-link nav__call-link--hover nav__call-link--active" href="tel:+1 234 555-55-55">call to order</a>
-            </div>
-          </nav>          
-          <a class="header__logo" href="#">
-            <img class="header__logo-img" src="img/Logo_Miami.png" alt="Logo of site Miami" width="136" height="80">
-          </a>
-          <div class="header__callback header__callback--hover header__callback--active">
-            <p class="header__phone-number visually-hidden">+1 234 555-55-55</p>
-            <a class="header__call-link" href="tel:+1 234 555-55-55">handset</a>
-          </div>        
+          </nav> 
+          <div class="menu__callback">
+            <p class="menu__phone-number">+1 234 555-55-55</p>
+            <a class="menu__call-link menu__call-link--hover menu__call-link--active" href="tel:+1 234 555-55-55">call to order</a>
+          </div>       
+        </div>
+      </div>        
+      <div class="container">          
+        <a class="header__logo" href="#">
+          <img class="header__logo-img" src="img/Logo_Miami.png" alt="Logo of site Miami" width="136" height="80">
+        </a>
+        <div class="header__callback header__callback--hover header__callback--active">
+          <p class="header__phone-number visually-hidden">+1 234 555-55-55</p>
+          <a class="header__call-link" href="tel:+1 234 555-55-55">handset</a>      
         </div>           
         <h1 class="header__title">Miami Condo Kings</h1>
       </div>     
@@ -51,18 +59,21 @@
       <section class="description">
         <div class="container">
           <h2 class="visually-hidden">About us</h2>
-          <p class="description__slogan">Miami best Real estate <span>here</span></p>
-          <div class="description__text">
-            <p class="description__text-lead">Over 50 years experience in love.</p>
-            <p>Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical.</p>
-            <p>The market leader in real estate since 2003. Awards Real Estate Company, 2010, 2011, 2013. More than 200 satisfied customers premium segment. We focus only on new buildings and high-level doskanalno know this area better than other specialists.Working directly with developers - so have more useful information about the profitable deals.</p>
-            <b>We will never be late!<br>Guaranteed secure transaction - 100%</b>
+          <div class="description__container">
+            <div class="description__slogan">Miami best Real estate <span>here</span></div>
+            <div class="description__text">
+              <p class="description__text-lead">Over 50 years experience in love.</p>
+              <p>Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical.</p>
+              <p>The market leader in real estate since 2003. Awards Real Estate Company, 2010, 2011, 2013. More than 200 satisfied customers premium segment. We focus only on new buildings and high-level doskanalno know this area better than other specialists.Working directly with developers - so have more useful information about the profitable deals.</p>
+              <b>We will never be late!<br>Guaranteed secure transaction - 100%</b>
+            </div>
           </div>
         </div>
       </section>
       <section class="gallery">
         <div class="container">
           <h2 class="gallery__title">Gallery</h2>
+          <div class="gallery__icon"></div>
           <div class="gallery-content">
             <figure class="gallery-content__list">
               <img class="gallery-content__img" src="img/vizcaya-891773.jpg" alt="Marina Palms house" width="672" height="256">
@@ -86,49 +97,53 @@
       <section class="feedback">
         <div class="container">
           <h2 class="feedback__title">Testimonials</h2>
-          <blockquote class="feedback__quote">
-            <img class="feedback__img" src="img/leslie-mckinney.png" alt="Leslie McKinney" width="150" height="150">
-            <cite class="feedback__author">Leslie Mckinney</cite>
-            <p class="feedback__post">CEO</p>
-            <p class="feedback__quote-text">Nice work, Certificates National Association of Realtors (USA)</p>
-          </blockquote>
-          <blockquote class="feedback__quote">            
-            <img class="feedback__img" src="img/scarlett-hawkins.png" alt="Scarlett Hawkins" width="150" height="150">
-            <cite class="feedback__author">Scarlett Hawkins</cite>
-            <p class="feedback__post">Senior Vice President</p>
-            <p class="feedback__quote-text">My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I enjoy with all my heart</p>
-          </blockquote>
-          <blockquote class="feedback__quote">
-            <img src="img/max-henry.png" alt="Max Henry" width="150" height="150">
-            <cite class="feedback__author">Max Henry</cite>
-            <p class="feedback__post">Chief Design Officer</p>
-            <p class="feedback__quote-text">When my lovely valley of steam rises and half-day sun is above an impermeable</p>
-          </blockquote>
+          <div class="feedback__icon"></div>
+          <div class="feedback__wrap">
+            <div class="feedback__quote">
+              <img class="feedback__img" src="img/leslie-mckinney.png" alt="Leslie McKinney" width="150" height="150">
+              <p class="feedback__author">Leslie Mckinney</p>
+              <p class="feedback__post">CEO</p>
+              <p class="feedback__quote-text">Nice work, Certificates National Association of Realtors (USA)</p>
+            </div>
+            <div class="feedback__quote">            
+              <img class="feedback__img" src="img/scarlett-hawkins.png" alt="Scarlett Hawkins" width="150" height="150">
+              <p class="feedback__author">Scarlett Hawkins</p>
+              <p class="feedback__post">Senior Vice President</p>
+              <p class="feedback__quote-text">My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I enjoy with all my heart</p>
+            </div>
+            <div class="feedback__quote">
+              <img class="feedback__img" src="img/max-henry.png" alt="Max Henry" width="150" height="150">
+              <p class="feedback__author">Max Henry</p>
+              <p class="feedback__post">Chief Design Officer</p>
+              <p class="feedback__quote-text">When my lovely valley of steam rises and half-day sun is above an impermeable</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contacts">
         <div class="container">          
           <h2 class="contacts__title">Contact us</h2>
-          <div class="contacts__container"></div>
+          <div class="contacts__icon"></div>
+          <div class="contacts__wrap">
             <ul class="contacts__list">
               <li class="contacts__item item-contacts">
                 <p class="item-contacts__title">Phone</p>
                 <p class="item-contacts__contact">+1 234 5555-55-55</p>
               </li>
+              <li class="contacts__item item__address">
+                <p class="item-contacts__title">Address</p>
+                <p class="item-contacts__contact">400 first ave. n.suite 700 Minneapolis, MN 55401</p>
+              </li>
               <li class="contacts__item">
                 <p class="item-contacts__title">Email</p>
                 <p class="item-contacts__contact">hello@miami.com</p>
-              </li>
-              <li class="contacts__item">
-                <p class="item-contacts__title">Address</p>
-                <p class="item-contacts__contact">400 first ave. n.suite 700Minneapolis, MN 55401</p>
-              </li>
+              </li>              
             </ul>
             <form class="contacts__form">
-              <input class="contacts__element" type="text" name="name" placeholder="Name" id="name" required>
-              <input class="contacts__element" type="email" name="email" placeholder="Email" id="email" required>
-              <textarea class="contacts__element" name="message" placeholder="Message" id="message"></textarea>
-              <button class="btn contacts__btn" type="submit">Consultation</button>
+              <input class="form__element" type="text" name="name" placeholder="Name" id="name" required>
+              <input class="form__element" type="email" name="email" placeholder="Email" id="email" required>
+              <textarea class="form__element form__element-textarea" name="message" placeholder="Message" id="message"></textarea>
+              <button class="btn form__btn" type="submit">Consultation</button>
             </form>
           </div>  
         </div>
