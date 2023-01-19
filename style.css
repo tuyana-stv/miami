@@ -15,8 +15,18 @@ body {
 }
 
 .visually-hidden {
+    /*position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;*/
     margin: 0;
-    /*display: none;*/
+    display: none;
 }
 
 .header {
@@ -117,20 +127,34 @@ body {
     align-self: center;
 }
 
-.header__call-link {
-    
-    font-size: 0;
-
-    border: 1px solid white;
-
+.header__callback {
+    text-align: right;
+    align-self: center;
+    position: relative;
 }
 
-.header__handset {
+.header__call-link {
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
     background-image: url(img/Icon-Phone-call.png);
     background-repeat: no-repeat;
     background-position: center;
-   width: 24px;
+    width: 24px;
     height: 24px;
+    
+}
+
+.header__call-link:hover + .visually-hidden {
+    display: block;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.header__phone-number {
+    position: absolute;
+    right: 40px;
+    top: 9px;
 }
 
 .header__line-title {
@@ -218,12 +242,16 @@ body {
 .gallery-content__list {
     margin: 0;
     padding-bottom: 40px;
-   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 256px 27px;  
+    row-gap: 24px; 
+    column-gap: 24px;
 }
 
 .gallery-content__img {
     border-radius: 8px;
-
+    
 }
 
 .gallery__btn {
@@ -233,13 +261,26 @@ body {
     border-radius: 8px; 
     border-color: #0075ff;
     margin: 0 auto;
-    display: block;    
+    display: block;   
+}
+
+.gallery__btn--hover:hover {
+    background-color: #005ECC;
+    color: #FFFFFF;
+    box-shadow: 0 13px 27px 0 rgba(0, 83, 181, 0.46);
+}
+
+.gallery__btn--active:active {
+    background-color: #005ECC;
+    color: #FFFFFF;
+    box-shadow: 0 8px 14px 0 rgba(0, 83, 181, 0.48);
 }
 
 .btn {
     line-height: 14px;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .feedback__wrap {
@@ -313,13 +354,36 @@ body {
     height: 48px;
     background-color: #F6F8FF;
     border-radius: 8px;
-    border-style: none;
+    border: 2px solid #F6F8FF;
     margin-bottom: 16px;
+    font-size: 14px;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding-left: 17px;
+}
+
+.form__element input {
+    padding-left: 17px;
 }
 
 .form__element-textarea {
     height: 144px;
     resize: none;
+    font-size: 14px;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding-top: 14px;
+}
+
+.form__element--hover:hover {
+    border: 2px solid #CCD0E0;
+}
+
+.form__element--focus:focus {
+    outline: none;
+    border: 2px solid #0075FF;
+}
+
+.form__element--active:active {
+    border: 2px solid #0075FF;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -327,8 +391,6 @@ body {
     font-size: 14px;
     line-height: 20px;
     font-family: "Roboto", "Arial", sans-serif;
-    padding-left: 17px;
-    padding-top: 14px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color:    #8F99A8;
@@ -336,8 +398,6 @@ body {
    font-size: 14px;
    line-height: 20px;
    font-family: "Roboto", "Arial", sans-serif;
-   padding-left: 17px;
-   padding-top: 14px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
    color:    #8F99A8;
@@ -345,24 +405,18 @@ body {
    font-size: 14px;
    line-height: 20px;
    font-family: "Roboto", "Arial", sans-serif;
-   padding-left: 17px;
-   padding-top: 14px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #8F99A8;
    font-size: 14px;
    line-height: 20px;
    font-family: "Roboto", "Arial", sans-serif;
-   padding-left: 17px;
-   padding-top: 14px;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
    color:    #8F99A8;
    font-size: 14px;
    line-height: 20px;
    font-family: "Roboto", "Arial", sans-serif;
-   padding-left: 17px;
-   padding-top: 14px;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
@@ -370,17 +424,28 @@ body {
    font-size: 14px;
    line-height: 20px;
    font-family: "Roboto", "Arial", sans-serif;
-   padding-left: 17px;
-   padding-top: 14px;
 }
 
 .form__btn {
     color: #FFFFFF;
-    background-color: #005ECC;
+    background-color: #0075FF;
     width: 411px;
     height: 56px;
     border-radius: 8px;
     border-style: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form__btn--hover:hover {
+    background-color: #005ECC;
+    color: #FFFFFF;
+    box-shadow: 0 13px 27px 0 rgba(0, 83, 181, 0.46);
+}
+
+.form__btn--active:active {
+    background-color: #005ECC;
+    color: #FFFFFF;
+    box-shadow: 0 8px 14px 0 rgba(0, 83, 181, 0.48);
 }
 
 .footer {

@@ -55,10 +55,8 @@
             <img class="header__logo-img" src="img/Logo_Miami.png" alt="Logo of site Miami" width="136" height="80">
           </a>
           <div class="header__callback header__callback--hover header__callback--active">
-            <span class="header__phone-number visually-hidden">+1 234 555-55-55</span>
-            <a class="header__call-link" href="tel:+1 234 555-55-55">
-              <span class="header__handset">call us</span>
-            </a>
+            <a class="header__call-link" href="tel:+1 234 555-55-55">call us</a>
+            <span class="header__phone-number visually-hidden">+1 234 555-55-55</span>            
           </div>
         </div>
         <div class="header__line-title"></div>           
@@ -85,22 +83,22 @@
           <h2 class="gallery__title">Gallery</h2>
           <div class="gallery__icon"></div>
           <div class="gallery-content">
-            <figure class="gallery-content__list">
+            <div class="gallery-content__list">
               <img class="gallery-content__img" src="img/vizcaya-891773.jpg" alt="Marina Palms house" width="672" height="256">
               <img class="gallery-content__img" src="img/beach-1156977.jpg" alt="North Miami beach" width="324" height="256">
-              <figcaption class="gallery-content__desc"><span>Marina Palms</span> / North Miami Beach, FL 33162</figcaption>
-            </figure>
-            <figure class="gallery-content__list">
+              <div  class="gallery-content__desc"><span>Marina Palms</span> / North Miami Beach, FL 33162</div>
+            </div>
+            <div class="gallery-content__list">
               <img class="gallery-content__img" src="img/miami-1638625.jpg" alt="Building with the US flag" width="498" height="256">
               <img class="gallery-content__img" src="img/vizcaya-891847.jpg" alt="Vizcaya" width="498" height="256">
-              <figcaption class="gallery-content__desc"><span>Edition Residens</span> / Miami Beach, FL 33139</figcaption>
-            </figure>
-            <figure class="gallery-content__list">
+              <div class="gallery-content__desc"><span>Edition Residens</span> / Miami Beach, FL 33139</div>
+            </div>
+            <div class="gallery-content__list">
               <img class="gallery-content__img" src="img/car.jpg" alt="Turquoise car" width="324" height="256">
               <img class="gallery-content__img" src="img/miami-beach.jpg" alt="Miami beach" width="672" height="256">
-              <figcaption class="gallery-content__desc"><span>Faena House</span> / Miami Beach, FL 33140</figcaption>
-            </figure>
-            <button class="btn gallery__btn">View all</button>
+              <div class="gallery-content__desc"><span>Faena House</span> / Miami Beach, FL 33140</div>
+            </div>            
+            <button class="btn gallery__btn gallery__btn--hover gallery__btn--active">View all</button>
           </div>
         </div>
       </section>
@@ -150,10 +148,10 @@
               </li>              
             </ul>
             <form class="contacts__form">
-              <input class="form__element" type="text" name="name" placeholder="Name" id="name" required>
-              <input class="form__element" type="email" name="email" placeholder="Email" id="email" required>
-              <textarea class="form__element form__element-textarea" name="message" placeholder="Message" id="message"></textarea>
-              <button class="btn form__btn" type="submit">Consultation</button>
+              <input class="form__element form__element--hover form__element--focus form__element--active" type="text" name="name" placeholder="Name" id="name" required>
+              <input class="form__element form__element--hover form__element--focus form__element--active" type="email" name="email" placeholder="Email" id="email" required>
+              <textarea class="form__element form__element-textarea  form__element--hover form__element--focus form__element--active" name="message" placeholder="Message" id="message"></textarea>
+              <button class="btn form__btn form__btn--hover form__btn--active" type="submit">Consultation</button>
             </form>
           </div>  
         </div>
