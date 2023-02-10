@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	$('.menu-burger__header').click(function(){
-        $('.menu-burger__header').toggleClass('open-menu');
-        $('.header__nav').toggleClass('open-menu');
-        $('body').toggleClass('fixed-page');
+	$('.header__icon-burger').click(function(){
+        $('.header__icon-burger').toggleClass('open-menu');
+        $('.nav').toggleClass('open-menu');
 	});
 });

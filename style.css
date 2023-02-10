@@ -14,27 +14,7 @@ body {
     margin: 0 auto;
 }
 
-/*@media (min-width: 320px) {
-    body {
-        min-width: 320px;
-    }
-
-    .container {
-        min-width: 280px;
-    }   
-}
-*/
 .visually-hidden {
-    /*position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;*/
     margin: 0;
     display: none;
 }
@@ -56,13 +36,14 @@ body {
 }
 
 .menu-header__icon-close {
-    background-image: url(img/Icon-Close.png);
+    background-image: url(img/icons/icon-close.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 24px;
     height: 24px;    
     align-self: center;
+    cursor: pointer;
 }
 
 .header__logo {
@@ -100,6 +81,10 @@ body {
     color: #FFFFFF;
 }
 
+.nav__link--hover:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
+
 .menu__callback,
 .header__phone-number {
     font-size: 12px;
@@ -128,7 +113,7 @@ body {
 }
 
 .header__icon-burger {
-    background-image: url(img/Icon-Burger-menu.png);
+    background-image: url(img/icons/icon-burger-menu.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -137,17 +122,23 @@ body {
     align-self: center;
 }
 
+.header__icon-burger--hover:hover {
+    background-image: url(img/icons/icon-burger-menu-hover.svg);
+    cursor: pointer;
+}
+
 .header__callback {
     text-align: right;
     align-self: center;
     position: relative;
+    
 }
 
 .header__call-link {
     font-size: 0;
     vertical-align: middle;
     display: inline-block;
-    background-image: url(img/Icon-Phone-call.png);
+    background-image: url(img/icons/icon-phone-call.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
@@ -159,12 +150,14 @@ body {
     display: block;
     color: #FFFFFF;
     font-size: 12px;
+    
 }
 
 .header__phone-number {
     position: absolute;
     right: 40px;
-    top: 9px;
+    top: 7px;
+    
 }
 
 .header__line-title {
@@ -216,17 +209,9 @@ body {
 }
 
 .description__container {
-    display: flex;
-
-}
-
-.description__slogan {
-    width: 324px;
-}
-
-.description__text {
-    margin-left: 198px;
-    width: 498px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
 }
 
 .gallery__title,
@@ -239,7 +224,7 @@ body {
 .feedback__icon,
 .contacts__icon {
     margin: 0 auto;
-    background-image: url(img/Icon-Corona-virus.png);
+    background-image: url(img/icons/icon-corona-virus.svg);
     width: 24px;
     height: 24px;
 }
@@ -261,15 +246,14 @@ body {
 
 .gallery-content__img {
     border-radius: 8px;
-    
 }
 
 .gallery__btn {
     background-color: transparent;
     width: 150px;
     height: 56px;
-    border-radius: 8px; 
-    border-color: #0075ff;
+    border: 2px solid #0075ff;
+    border-radius: 8px;     
     margin: 0 auto;
     display: block;   
 }
@@ -291,6 +275,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .feedback__wrap {
@@ -303,7 +288,14 @@ body {
 .feedback__post,
 .item-contacts__title {
     color: #9FADC2;
-    font-size: 14px;    
+    font-size: 14px;   
+}
+
+.feedback__author,
+.feedback__post,
+.feedback__quote-text {
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 .feedback__quote {
@@ -325,12 +317,13 @@ body {
 
 .contacts__list {
     display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 74px 74px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
        "item__phone item__address"
        "item__email item__address";
     width: 411px;
+    height: 148px;
     column-gap: 111px;
 }
 
@@ -473,4 +466,93 @@ body {
     align-content: center;
     justify-content: center;
     overflow: auto;
+}
+
+@media (max-width: 320px) {    
+    .header__title {
+        font-size: 48px;
+        line-height: 48px;
+        width: 280px;
+    }
+
+    body,
+    .header__menu {
+        min-width: 320px;
+    }
+
+    .container {
+        max-width: 280px;
+    }
+
+    .description__slogan,
+    .gallery__title,
+    .feedback__title,
+    .contacts__title {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .description__container {
+        display: block;    
+    }
+
+    .description__slogan {
+        margin-bottom: 48px;
+    }
+
+    .gallery-content__img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+    }
+
+    .gallery-content__list {
+        grid-template-rows: 130px 27px; 
+        row-gap: 16px;
+        column-gap: 20px;
+    }
+
+    .gallery-content__desc {
+        grid-column: 1 / 3;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .feedback__wrap {
+        flex-direction: column;
+        row-gap: 45px;
+    }
+
+    .feedback__quote {
+        max-width: 100%;
+    }
+ 
+    .contacts__wrap {
+        flex-direction: column;
+        row-gap: 32px;
+        max-width: 100%;
+    }
+
+    .contacts__list {
+        display: block;
+        height: 290px;
+        max-width: 100%;
+    }
+
+    .contacts__item {
+        margin-bottom: 24px;
+    }
+
+    .contacts__form {
+        max-width: 100%;
+    }
+
+    .form__element {
+        width: 257px;
+    }
+
+
+
 }
