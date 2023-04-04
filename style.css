@@ -9,6 +9,10 @@ body {
     line-height: 27px;
 }
 
+.fixed-page {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1020px;
     margin: 0 auto;
@@ -51,10 +55,20 @@ body {
 }
 
 .header__menu {
+    position: fixed;
     background-color: #0075FF;
-    min-width: 1260px;
-    padding-bottom: 146px;
+    width: 100%;
+    padding-bottom: 220px;
     padding-top: 24px;
+    z-index: 1;
+    overflow: auto;
+    top: -250%;
+    transition: all 0.5s ease;
+    margin: 0 auto;
+}
+
+.header__menu.active {
+    top: 0;
 }
 
 .nav {
@@ -73,7 +87,7 @@ body {
     line-height: 22px;
     font-weight: bold;    
     text-transform: uppercase;
-    padding-bottom: 32px;  
+    padding-bottom: 32px;
 }
 
 .nav__link {
@@ -131,7 +145,6 @@ body {
     text-align: right;
     align-self: center;
     position: relative;
-    
 }
 
 .header__call-link {
@@ -176,9 +189,11 @@ body {
        
 }
 
-.description {
+.description, 
+.gallery,
+.feedback,
+.contacts {
     padding-top: 104px;
-    padding-bottom: 104px;
 }
 
 .description__slogan,
@@ -231,7 +246,6 @@ body {
 
 .gallery-content {
     padding-top: 56px;
-    padding-bottom: 104px;
 }
 
 .gallery-content__list {
@@ -282,7 +296,6 @@ body {
     padding-top: 56px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 104px;
 }
 
 .feedback__post,

@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__menu visually-hidden">
+      <div class="header__menu">
         <div class="container">
           <div class="menu-header">
             <a class="menu-header__icon-close">
@@ -25,31 +25,31 @@
           <nav class="nav">          
             <ul class="nav__list">
               <li class="nav__item nav__item--current">
-                <a class="nav__link nav__link--hover nav__link--active" href="#">home</a>
+                <a class="nav__link nav__link--hover nav__link--active" href="#home">home</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--hover nav__link--active" href="#">about us</a>
+                <a class="nav__link nav__link--hover nav__link--active" href="#about-us">about us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--hover nav__link--active" href="#">gallery</a>
+                <a class="nav__link nav__link--hover nav__link--active" href="#gallery">gallery</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--hover nav__link--active" href="#">testimonials</a>
+                <a class="nav__link nav__link--hover nav__link--active" href="#testimonials">testimonials</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--hover nav__link--active" href="#">contacts</a>
+                <a class="nav__link nav__link--hover nav__link--active" href="#contacts">contacts</a>
               </li>
             </ul>
           </nav> 
           <div class="menu__callback">
             <p class="menu__phone-number">+1 234 555-55-55</p>
             <a class="menu__call-link menu__call-link--hover menu__call-link--active" href="tel:+1 234 555-55-55">call to order</a>
-          </div>       
-        </div>
+          </div> 
+        </div>      
       </div>        
       <div class="container"> 
-        <div class="header__wrap">
-          <a class="header__icon-burger header__icon-burger--hover">
+        <div class="header__wrap" id="home">
+          <a class="header__icon-burger header__icon-burger--hover burger-menu__open">
             <span></span>
           </a>          
           <a class="header__logo" href="#">
@@ -65,7 +65,7 @@
       </div>     
     </header>
     <main>
-      <section class="description">
+      <section class="description" id="about-us">
         <div class="container">
           <h2 class="visually-hidden">About us</h2>
           <div class="description__container">
@@ -79,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container">
           <h2 class="gallery__title">Gallery</h2>
           <div class="gallery__icon"></div>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="testimonials">
         <div class="container">
           <h2 class="feedback__title">Testimonials</h2>
           <div class="feedback__icon"></div>
@@ -129,7 +129,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">          
           <h2 class="contacts__title">Contact us</h2>
           <div class="contacts__icon"></div>
@@ -165,7 +165,6 @@
         </a>
       </div>
     </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="js/menu.js"></script>
   </body>
 </html>
